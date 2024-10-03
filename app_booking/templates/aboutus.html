@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- contents  -->
+ {% load static %}
+    <div class="home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url({% static 'img/about.jpg' %});"></div>
+    <div class="col about-header">
+        <h1>ABOUT</h1>
+    </div>
+    <div class="mt-5">
+      <div class="container">
+        <div>
+          <!-- <h4>A unique space to relax, restore, rejuvenate and preserve the natural balance of your mind</h4> -->
+        </div>
+        <div class="mt-4">
+            <ul><br>
+                <!-- <li>Residential integrative medical centre with different Systems of Medicine and Complementary Therapies in a single facility</li><br> -->
+                <li>Detailed Comprehensive Holistic Health Evaluation and Indi-vidualised Treatment Programmes to treating the person</li><br>
+                <li>Medical need-based Programmes for specific diseases , chronic and incurable conditions</li><br>
+                <li>Wellness Programmes to relax, rejuvenate and improve health</li><br>
+                <li>Medically monitored by Qualified Doctors in each System of Medicine and implemented by Well trained therapists</li><br>
+                <li>Constant review of Programme, Follow Us by email, fax and telephone and Despatch of Medicines around the world</li><br>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+{% endblock content %}
