@@ -17,11 +17,12 @@ def booking_page(request):
         dname = request.POST.get('d_name')
         pname = request.POST.get('p_name')
         date = request.POST.get('date')
-        time = request.POST.get('time')
+        # time = request.POST.get('time')
+        selected_time = request.POST.get('selected_time')
         contact=request.POST.get('contactno')
         message = request.POST.get('message')
         # print(pname)
-        query = booking(d_name=dname, p_name=pname, date=date, time=time, contactno=contact, message=message)
+        query = booking(d_name=dname, p_name=pname, date=date, time=selected_time, contactno=contact, message=message)
         query.save()
         return redirect("/") # redirect to homepage,
     return render(request, 'booking.html', context) # this context is  for : available doctor's name list

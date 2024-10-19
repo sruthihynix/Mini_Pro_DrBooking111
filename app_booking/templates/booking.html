@@ -42,10 +42,51 @@
                     <input type="date" class="form-control" id="date" name="date" required>
                 </div>
 
+<!--                <div class="form-group">-->
+<!--                    <label for="time">Time</label>-->
+<!--                    <input type="time" class="form-control" id="time" name="time" required>-->
+<!--                </div>-->
                 <div class="form-group">
+                    <br>
                     <label for="time">Time</label>
-                    <input type="time" class="form-control" id="time" name="time" required>
+                    <br>
+                    <div class="row" style="display: flex; justify-content: space-between;">
+
+                        <div class="column" style="flex: 1; padding: 10px;">
+                            <span style="font-weight: bold;">Morning</span><br>
+                            <input type="radio" id="time-10" name="selected_time" value="10">
+                            <label for="time-10">10.00</label>
+                            <br>
+                            <input type="radio" id="time-11" name="selected_time" value="11">
+                            <label for="time-11">11.00</label><br>
+                            <input type="radio" id="time-12" name="selected_time" value="12">
+                            <label for="time-12">12.00</label>
+                            <br>
+                            <input type="radio" id="time-01" name="selected_time" value="01">
+                            <label for="time-01">01.00</label>
+                        </div>
+                        <div class="column" style="flex: 1; padding: 10px;">
+                            <span style="font-weight: bold;">Evening</span><br>
+                            <input type="radio" id="time-04" name="selected_time" value="04">
+                            <label for="time-04">04.00</label><br>
+
+                            <input type="radio" id="time-05" name="selected_time" value="05">
+                            <label for="time-05">05.00</label><br>
+                            <input type="radio" id="time-06" name="selected_time" value="06">
+                            <label for="time-06">06.00</label>
+                            <br>
+                            <input type="radio" id="time-07" name="selected_time" value="07">
+                            <label for="time-07">07.00</label>
+                        </div>
+                    </div>
+                     {% if selected_time %}
+                          <p>You selected: {{ selected_time }}</p>
+                     {% endif %}
+
                 </div>
+
+
+
                 <div class="form-group">
                     <label for="contactno">Contact Number</label>
                     <input type="text" class="form-control" id="contactno" name="contactno"

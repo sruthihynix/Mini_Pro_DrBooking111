@@ -38,7 +38,7 @@ class booking(models.Model):
     p_name = models.CharField(max_length=50)
     date = models.DateField(default=timezone.now,null=True,blank=True)
     time = models.TimeField(null=True,blank=True)
-    contactno = models.IntegerField()
+    contactno = models.CharField(max_length=100)
     message = models.CharField(max_length=250)
     class Meta:
         db_table = "booking"

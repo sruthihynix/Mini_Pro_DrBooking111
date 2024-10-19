@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'pro_dr_booking.wsgi.application'
 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.mysql',
-'NAME': 'book_rest', # +++   db name in WB
+'NAME':'minipro_drbook_111', # +++   db name in WB
 'USER': 'root',
 'PASSWORD': '3636',
 'HOST': '',
