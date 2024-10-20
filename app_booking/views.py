@@ -1,11 +1,17 @@
 from django.shortcuts import render,redirect
 from app_booking.models import Doctor,Patient,booking
+
+# from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login,logout
+# from django.contrib.auth.decorators import login_required
+from django.http.response import HttpResponse
+
 # Create your views here.
 def home_page(request):
     return render(request, 'home.html')
 
-def signup(request):
-    return render(request,'signup.html')
+# def signup(request):
+#     return render(request,'signup.html')
 
 def booking_page(request):
 
@@ -48,3 +54,21 @@ def contactus_page(request):
 
 def aboutus_page(request):
     return render(request,'aboutus.html')
+
+def Login(request):
+    if request.method=='POST':
+        uname=request.POST.get('uname')
+        pwd = request.POST.get('pwd')
+
+        # user=authenticate(username=uname,password=pwd) # correct
+        user = authenticate(request,username=uname, password=pwd)
+        if user is not None:
+            login(request,user)
+            return  redirect('appointments')
+        else:
+            return HttpResponse('Error,User does not exist')
+    return render(request, 'login.html')
+
+def logout_user(request):
+    logout(request)
+    return redirect('login')
